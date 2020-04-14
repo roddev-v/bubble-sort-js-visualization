@@ -12,7 +12,7 @@ function bubbleSort(input) {
     let n = input.length;
     for (let i = 0; i < n - 1; i++) {
         for (let j = 0; j < n - i - 1; j++) {
-            printArray(input, `Step i=${i} j=${j}`, j);
+            printArray(input, `Step i=${i} j=${j}`, j, i);
             if (input[j] > input[j + 1]) {
                 let aux = input[j];
                 input[j] = input[j + 1];
@@ -42,3 +42,14 @@ function printArray(input, label, highlight) {
     });
     resultArea.appendChild(container);
 }
+
+function animate({timing, draw, duration}) {
+    const start = performance.now();
+    requestAnimationFrame(function animate(time) {
+      let timeFraction = (time - start) / duration;
+      if (timeFraction > 1) timeFraction = 1;
+      let progress = timing(timeFraction)
+      draw(progress); // draw it
+      if (timeFraction < 1) requestAnimationFrame(animate);
+    });
+  }

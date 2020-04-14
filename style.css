@@ -34,3 +34,12 @@ body {
     color: white;
     border: 1px solid #3700B3;
 }
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.col {
+    width: 50%;
+}
