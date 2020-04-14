@@ -1,0 +1,36 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+.item {
+    margin: 2px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+}
+
+.label {
+    display: flex;
+    width: 100px;
+    height: 40px;
+    height: 20px;
+    margin: 2px;
+    padding: 10px;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+}
+
+.highlight {
+    background-color: #3700B3;
+    color: white;
+    border: 1px solid #3700B3;
+}
